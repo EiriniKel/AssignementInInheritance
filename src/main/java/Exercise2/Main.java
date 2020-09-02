@@ -15,5 +15,16 @@ public class Main {
         simple.buy(x4);
         simple.sell(x1);
         System.out.println(simple.getRevenue());
+
+        System.out.println("\n");
+        IStore invStore = new InventoryRetailStore();
+        invStore.buy(x1);
+        invStore.buy(x4);
+        invStore.sell(x1);
+        System.out.println(invStore.getRevenue());
+        invStore.sell(x2);
+        invStore.getInventory();
+        System.out.println("Revenue is " + invStore.getRevenue());
+
     }
 }
